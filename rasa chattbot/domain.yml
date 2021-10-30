@@ -1,0 +1,85 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - order_pizza
+  - pizza_location
+  - pizza_menu
+  - request_pizza
+
+responses:
+  utter_greet:
+  - text: "Hey haalloooo! hvernig ertu?"
+
+  utter_cheer_up:
+  - text: "yooooolo Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you??"
+
+  utter_happy:
+  - text: "Great, carry on!! :))))))))"
+
+  utter_goodbye:
+  - text: "hehe bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rassa."
+
+  utter_pizza_selected:
+    - text: "Whoho you have selected a pizza\n
+      - size: {pizza_size}\n
+      - topping: {pizza_topping}"
+  
+  utter_submit:
+    - text: "All done!"
+  
+  utter_slots_values:
+  - text: "tu pantadir pizzu med tessu:\n
+            - size: {pizza_size}\n
+            - topping: {pizza_topping}"
+  
+  utter_pending_pizza:
+  - text: "hvernig viltu hafa hana?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+entities:
+  - pizza_size
+  - pizza_type
+  - pizza_amount
+  - pizza_topping
+  - client_name
+  - phone_number
+  - order_number
+
+slots:
+  pizza_topping:
+    type: text
+    influence_conversation: false
+  pizza_size:
+    type: text
+    influence_conversation: false
+
+forms:
+  pizza_order_form:
+    required_slots:
+      pizza_topping:
+        - type: from_entity
+          entity: pizza_topping
+      pizza_size:
+        - type: from_entity
+          entity: pizza_size
+
+actions:
+  - get_pizza_order
+  - action_hello_world

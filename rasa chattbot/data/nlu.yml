@@ -1,0 +1,119 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hæ
+    - halló
+    - yo wasap
+    - sælir
+    - sjæælir
+    - aloha minn vinur
+    - blessaður stressaður
+    - góðan daginn
+    - góða kvöldið
+
+- intent: goodbye
+  examples: |
+    - bæ
+    - bæbæ
+    - sjáumst
+    - heyrumst seinna
+
+- intent: affirm
+  examples: |
+    - já
+    - yesss
+    - auðvitað
+    - of course
+    - hljómar vel
+    - rétt og satt
+
+- intent: deny
+  examples: |
+    - nei
+    - n
+    - aldrei
+    - ég held ekki
+    - mér líkar það ekki
+    - ekki séns
+
+- intent: mood_great
+  examples: |
+    - mér líður vel
+    - ég er góð
+    - ég er bara hress
+    - ég er kóngurinn
+    - pizzagóður
+    - góð
+    - aldrei verið betri
+
+- intent: mood_unhappy
+  examples: |
+    - þetta var hræðilegur dagur
+    - ég er leiður
+    - mér líður ekki það vel
+    - ég er eitthvað þungur
+    - leiður
+    - bugaður
+
+- intent: bot_challenge
+  examples: |
+    - ertu chatbot?
+    - ertu manneskja?
+    - við hvern tala ég?
+
+- intent: request_pizza
+  examples: |
+    - ég ætla að fá pizzu
+    - get ég fengið eina stóra margarítu
+    - ég ætla að fá eina miðlungs pizzu
+    - panta pizzu
+    - pizza
+    - pítsa
+    - mig langar í pítsu
+    - mig langar í pizzu
+    - svangur
+    - ég vil borða
+    - matur
+
+# ég er bara að setja eitthvað inn hérna, langar að hafa þetta þannig að 
+# rasa pikki upp að að ég hafi sett inn eitthvað af áleggjunum sem eru í lookup...
+- intent: order_pizza
+  examples: |
+    - ég vil [small](pizza_size) með [hakki](pizza_topping)
+    - ég vil [small](pizza_size) með [hakki](pizza_topping)
+    - ég vil [hakk](pizza_topping) 
+
+
+- lookup: pizza_siz
+  examples: |
+    - large
+    - medium
+    - small
+
+- lookup: meat_topping
+  examples: |
+    - skinka
+    - pepperoni
+    - hakk
+    - hakki
+    - beikon
+    - kjulli
+
+
+- lookup: veggie_topping
+  examples: |
+    - paprika
+    - sveppir
+
+
+- lookup: pizza_topping
+  examples: |
+    - skinka
+    - pepperoni
+    - hakk
+    - beikon
+    - kjulli
+    - paprika
+    - sveppir
