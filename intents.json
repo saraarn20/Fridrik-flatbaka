@@ -1,0 +1,95 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hæ",
+        "Hæhæ",
+        "Góðan daginn",
+        "Daginn",
+        "Zup",
+        "Yoo"
+      ],
+      "responses": [
+        "Hæhæ",
+        "Góðan daginn kæri vinur",
+        "Hææ :)",
+        "Hææ, get ég hjálpað þér?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bæ", "Sé þig seinna", "Bless"],
+      "responses": [
+        "Sjáumst, takk fyrir spjallið",
+        "Bæjó :)",
+        "Bææ, heyrumst aftur sem fyrst!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Takk", "Þakka þér", "Takk kærlega"],
+      "responses": ["Ekkert mál!", "Minnsta :)", "Mín var ánægjan"]
+    },
+    {
+      "tag": "hungry",
+      "patterns": [
+        "Ég er svangur",
+        "Ég er svöng",
+        "Hvað á ég að borða"
+      ],
+      "responses": [
+        "Pizza er alltaf svarið",
+        "Fáðu þér flatböku"
+      ]
+    },
+    {
+      "tag": "pizza",
+      "patterns": [
+        "Mig langar í pizzu",
+        "Ég væri til í pizzu"
+      ],
+      "responses": [
+        "Okei lets go, hvernig pizzu langar þig í?",
+        "Pöntum pizzu, hvernig viltu hafa hana?"
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and Paypal",
+        "We accept most major credit cards, and Paypal"
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does shipping take?",
+        "When do I get my delivery?"
+      ],
+      "responses": [
+        "Delivery takes 2-4 days",
+        "Shipping takes 2-4 days"
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Segðu mér brandara",
+        "Funny",
+        "Brandari"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    }
+  ]
+}
