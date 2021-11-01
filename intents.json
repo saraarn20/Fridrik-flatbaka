@@ -55,6 +55,28 @@
       ]
     },
     {
+      "tag": "pizza_type",
+      "patterns": [
+        "Mig langar í [pizza_type]",
+        "Ég væri til í [pizza_type]",
+        "[pizza_type]"
+      ],
+      "responses": [
+        "Okei lets go, [pizza_type] coming up!",
+      ]
+    },
+    {
+      "tag": "pizza_size",
+      "patterns": [
+        "Mig langar í [pizza_size]",
+        "Ég væri til í [pizza_size]",
+        "[pizza_size]"
+      ],
+      "responses": [
+        "Okei lets go, [pizza_size] coming up!",
+      ]
+    },
+    {
       "tag": "payments",
       "patterns": [
         "Do you take credit cards?",

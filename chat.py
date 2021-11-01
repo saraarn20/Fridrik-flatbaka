@@ -26,7 +26,15 @@ model.load_state_dict(model_state)
 model.eval()
 
 bot_name = "Friðrik Flatbaka"
-print("Spjöllum! (type 'quit' to exit)")
+print("Spjöllum (helst um pizzu)! (type 'quit' to exit)")
+
+pizza_toppings = ["hakk", "skinka", "laukur", "sveppir"]
+pizza_sizes = ["medium", "small", "large", "lítil", "stór"]
+pizza_botn = ["vegan", "venjulegur", "ítalskur"]
+pizza_type = ["margarida", "hawaii", "pepp&svepp", "sveppir"]
+
+states = { 'pizza_type': False, 'pizza_size': False }
+
 while True:
     # sentence = "do you use credit cards?"
     sentence = input("You: ")
@@ -48,6 +56,10 @@ while True:
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                print(f"{bot_name}: {random.choice(intent['responses'])}")
+                if tag == "pizza_type":
+                    print("pizza_type", f"þú hefur valið {sentence}")
+                else:
+                    print(f"{bot_name}: {random.choice(intent['responses'])}")
+
     else:
         print(f"{bot_name}: Ég er ekki alveg að fylgja... Eigum við ekki bara að fá okkur pizzu?")
